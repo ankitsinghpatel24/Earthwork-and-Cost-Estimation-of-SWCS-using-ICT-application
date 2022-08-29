@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brench Terrace</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    
+    <div class="container  mt-4">
+        <div class="jumbotron">
+            <h1 class="">Contour Bud</h1>
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                  <span class="input-group-text" id="basic-addon1">Width</span>
+                </div>
+                <input type="text" name='width' class="form-control" placeholder="Width (in meters)" aria-label="top_width" aria-describedby="basic-addon1">
+                <div class="input-group-append">
+                    <span class="input-group-text" id="basic-addon2">meter</span>
+                </div>
+            </div>
+        
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                  <span class="input-group-text" id="basic-addon1">Length</span>
+                </div>
+                <input type="text" name='length' class="form-control" placeholder="Length (in meters)" aria-label="top_width" aria-describedby="basic-addon1">
+                <div class="input-group-append">
+                    <span class="input-group-text" id="basic-addon2">meter</span>
+                </div>
+            </div>
+        
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                  <span class="input-group-text" id="basic-addon1">No. of Benche Terrace</span>
+                </div>
+                <input type="text" name='n' class="form-control" placeholder="No. of Benche Terrace (units)" aria-label="top_width" aria-describedby="basic-addon1">
+                <div class="input-group-append">
+                    <span class="input-group-text" id="basic-addon2">meter</span>
+                </div>
+            </div>
+            
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                  <span class="input-group-text" id="basic-addon1">Depth of Terrace</span>
+                </div>
+                <input type="text" name='depth' class="form-control" placeholder="Depth (in meters)" aria-label="depth" aria-describedby="basic-addon1">
+                <div class="input-group-append">
+                    <span class="input-group-text" id="basic-addon2">meter</span>
+                </div>
+            </div>
+            
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                  <span class="input-group-text" id="basic-addon1">Terrace Cut</span>
+                </div>
+                <select name="a" placeholder="Rainfall Level"  class="form-control" id="exampleFormControlSelect1">
+                    <option value=0>Vertical Cut</option>
+                    <option value=1>Batter slope is 1:1</option>
+                    <option value=0.5>Batter slope is 1:2</option>
+                    <option value=0.33333>Batter slope is 1/5:1</option>
+                </select>
+                <div class="input-group-append">
+                    <span class="input-group-text" id="basic-addon2">%</span>
+                </div>
+            </div>  
+        
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                  <span class="input-group-text" id="basic-addon1">Soil Condition</span>
+                </div>
+                <select name="rate" placeholder="Rainfall Level"  class="form-control" id="exampleFormControlSelect1">
+                    <option value=360>Hard Rock</option>
+                    <option value=175>Soft / Disintegrated/ Weathered Rock</option>
+                </select>
+                <div class="input-group-append">
+                    <span class="input-group-text" id="basic-addon2">%</span>
+                </div>
+            </div>  
+            <button onclick="calculate()" class="btn btn-primary btn-lg"  role="button">Calculate</button>
+            <hr class="my-4">
+            <p>
+                Earthwork per ha = <span id="output1">-</span> m<sup>3</sup> <br>Total Cost of Construction = Rs. <span id="output2">0</span>/- <br>
+            </p>
+        </div>
+
+        <div>
+            <p>
+                The original bench terrace system consists of a series of flat shelf-like areas that convert a steep slope of 20 to 30 percent to a series of level, or nearly level benches (Fig. 5.2). In other words, bench terracing consists of construction of series of platforms along contours cut into hill slope in a step like formation. These platforms are separated at regular intervals by vertical drop or by steep sided and protected by vegetation and sometimes packed by stone retaining walls. In fact, bench terrace converts the long un-interrupted slope into several small strips and make protected platform available for farming. In several hilly areas bench terraces have been used for the purpose of converting hill slopes to suit agriculture. In some areas where the climatic conditions favour the growing of certain cash crops like potato, coffee etc., the hill slopes are to be bench terraced before the area is put for cultivation of these crops. Bench terraces have also been adopted for converting sloping lands into irrigated fields or for orchard plantations.
+                <br>
+            </p>
+            <img src="../images/bt.jpg" alt="" class="img-fluid">
+            <b>Types of Bench Terraces</b>
+            <p>
+                Depending on the purpose for which they are used, bench terraces are also classified as follows:
+                <ol>
+                    <li>
+                        <b>Hill-type bench terraces:</b> used for hilly areas with a grade reversely towards the hill.
+                    </li>
+                    <li>
+                        <b>Irrigated bench terraces:</b> level benches adopted under irrigated conditions.
+                    </li>
+                    <li>
+                        <b>Orchard bench terraces:</b> narrow width terraces for individual trees. These are also referred to as intermittent terraces and step terraces.
+                    </li>
+                </ol>
+
+                The conversion of land into bench terraces over a period of time is referred to as gradual bench terracing. Bench terraces are classified depending upon the slope of benches. The different types are: 
+                <ol>
+                    <li>bench terraces sloping outward </li>
+                    <li>bench terraces sloping inward </li>
+                    <li>bench terraces with level top</li>                    
+                </ol>
+                Bench terraces with slopes inside are to be adopted in heavy rainfall areas where a major portion of the rainfall is to be drained as surface runoff. In the case of these terraces, a suitable drain at the inward end of each of these terraces is to be provided to drain the runoff. These drains ultimately lead to a suitable outlet. These are also known as hill-type terraces. Bench terraces with level top are suitable for areas of medium rainfall, evenly distributed and having deep and highly permeable soils. Due to the fact that no slope is given to the benches it is expected that the most of the rainfall coming over the area is to be absorbed by the soil and very little water is to go as surface drainage. These types of terraces are also used where irrigation facilities are available and referred to as irrigated bench terraces. Bench terraces sloping outward are to be used in low rainfall areas with permeable soils. For bench terraces sloping outward a shoulder bund is essential even though such a bund is provided in the other two types also for giving stability to the edge of the terrace. In these terraces the rainfall thus conserved will have more time for soaking into the soil. Bench terraces with narrow width (about 1 m) are sometimes constructed for orchards bench terraces. These terraces are referred to as step terraces when a series of step like formations are made.
+
+
+            </p>
+        </div>
+    </div>
+
+
+    <!-- scripts -->
+    <script src="./index.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+</body>
+</html>

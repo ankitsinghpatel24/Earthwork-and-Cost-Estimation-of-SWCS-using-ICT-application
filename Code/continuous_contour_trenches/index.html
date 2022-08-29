@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Continous Contour Trenches</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    
+    <div class="container  mt-4">
+        <div class="jumbotron">
+            <h1 class="">Continous Contour Trenches</h1>
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                  <span class="input-group-text" id="basic-addon1">CCT Width</span>
+                </div>
+                <input type="text" name='length' class="form-control" placeholder="Total length of CCT in 1 ha (in meters)" aria-label="top_width" aria-describedby="basic-addon1">
+                <div class="input-group-append">
+                    <span class="input-group-text" id="basic-addon2">meter</span>
+                </div>
+            </div>
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                  <span class="input-group-text" id="basic-addon1">Breadth</span>
+                </div>
+                <input type="text" name='breadth' class="form-control" placeholder="Breadth (in meters)" aria-label="bottom_width" aria-describedby="basic-addon1">
+                <div class="input-group-append">
+                    <span class="input-group-text" id="basic-addon2">meter</span>
+                </div>
+            </div>
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                  <span class="input-group-text" id="basic-addon1">Depth</span>
+                </div>
+                <input type="text" name='depth' class="form-control" placeholder="Depth (in meters)" aria-label="depth" aria-describedby="basic-addon1">
+                <div class="input-group-append">
+                    <span class="input-group-text" id="basic-addon2">meter</span>
+                </div>
+            </div>
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                  <span class="input-group-text" id="basic-addon1">No. of HA</span>
+                </div>
+                <input type="text" name='ha' class="form-control" placeholder="No. of HA (units)" aria-label="ha" aria-describedby="basic-addon1">
+                <div class="input-group-append">
+                    <span class="input-group-text" id="basic-addon2">units</span>
+                </div>
+            </div>
+            <button onclick="calculate()" class="btn btn-primary btn-lg"  role="button">Calculate</button>
+            <hr class="my-4">
+            <p>
+                Earthwork per ha = <span id="output1">-</span> m<sup>3</sup> <br>Total Cost of Construction = Rs. <span id="output2">0</span>/- <br>
+            </p>
+        </div>
+
+        <div>
+            <img src="../images/cct.jpg" alt="" class="img-fluid">
+            <p>
+                The contour trenches are similar to continuous trench except it follows the prevailing contour of the area. In contour trenches, the horizontal interval are varying unlike continuous trenches. However, vertical interval is fixed usually kept at 3-5 meters. This type of trenches are little difficult to construct but has the advantages over the continuous trenches in terms of consistent soil deposition and hence easy maintenance and less risk of failure.
+<br> Contour Trenches are a simple, low cost method of checking the velocity of runoff in ridge area of any watershed. A contour trenching is excavated trench along a uniform level across the slope of land in the top portion of catchment. Trench along contour line increases retention of runoff for a longer period within the trench and significant reduction in soil erosion. Contour trenching should be carried out perpendicular to the slope. Contour trenches also can be laid as staggered. Contour trenches are widely adopted in soil conservation works.
+<br> Contour trenching is an agricultural technique that can be easily applied in arid sub-Sahara areas to allow for water, and soil conservation, and to increase agricultural production.
+<br> Between two trenches crops can benefit during the growing season (when there is less rain) from the subsoil water reserve gathered during the rainy season.
+
+<br> Immediate advantages are the following:
+<ol>
+    <li>The rain water does not immediately run off the hill,</li>
+    <li>Water does not evaporate uselessly</li>
+    <li>The water balance is enhanced</li>
+    <li>Crops do not suffer later on from water shortage,</li>
+    <li>Fertile soil particles are not lost by water and wind erosion.</li>
+    <li>When the sun shines on the water, light and heat are reflected onto plants on the northern shore of the trench, this effect and the increased humidity create micro climates in the area. These micro climates can support plants from different hardiness zones.</li>
+</ol>
+
+<b>Technique</b>
+<br>Trenches can be artificially dug along the contour lines. Water flowing down the hill is retained by the trench, and is infiltrating the soil below.
+
+<b>Implementation</b>
+Depending on the slope of the hill, the parallel trenches can be closer or further from one another.
+<br> Manually dug trenches are smaller. Machine dug trenches can be deeper. The dimensions, and the format of the trench should correspond to the local climate and soil conditions. The trench should be big enough to keep all the water; no water should spoil over the downhill border. The upside of the trench should be protected against erosion, by means of e.g. grass, shrubs, or fabric.
+
+
+            </p>
+        </div>
+    </div>
+
+
+    <!-- scripts -->
+    <script src="./index.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+</body>
+</html>

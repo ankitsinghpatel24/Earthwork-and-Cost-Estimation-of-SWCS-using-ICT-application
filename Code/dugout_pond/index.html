@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dugout Pond</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    
+    <div class="container  mt-4">
+        <div class="jumbotron">
+            <h1 class="">Dugout Pond</h1>
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                  <span class="input-group-text" id="basic-addon1">Top Length</span>
+                </div>
+                <input type="text" name='top_length' class="form-control" placeholder="Top Length (in meteres)" aria-label="ha" aria-describedby="basic-addon1">
+                <div class="input-group-append">
+                    <span class="input-group-text" id="basic-addon2">metres</span>
+                </div>
+            </div>
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                  <span class="input-group-text" id="basic-addon1">Top Breadth</span>
+                </div>
+                <input type="text" name='top_breadth' class="form-control" placeholder="Top Breadth (in meteres)" aria-label="ha" aria-describedby="basic-addon1">
+                <div class="input-group-append">
+                    <span class="input-group-text" id="basic-addon2">metres</span>
+                </div>
+            </div>
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                  <span class="input-group-text" id="basic-addon1">Bottom Length</span>
+                </div>
+                <input type="text" name='bottom_length' class="form-control" placeholder="Bottom Length (in meteres)" aria-label="ha" aria-describedby="basic-addon1">
+                <div class="input-group-append">
+                    <span class="input-group-text" id="basic-addon2">metres</span>
+                </div>
+            </div>
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                  <span class="input-group-text" id="basic-addon1">Bottom Breadth</span>
+                </div>
+                <input type="text" name='bottom_breadth' class="form-control" placeholder="Bottom Breadth (in meteres)" aria-label="ha" aria-describedby="basic-addon1">
+                <div class="input-group-append">
+                    <span class="input-group-text" id="basic-addon2">metres</span>
+                </div>
+            </div>
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                  <span class="input-group-text" id="basic-addon1">Depth</span>
+                </div>
+                <input type="text" name='depth' class="form-control" placeholder="Depth (in meteres)" aria-label="ha" aria-describedby="basic-addon1">
+                <div class="input-group-append">
+                    <span class="input-group-text" id="basic-addon2">metres</span>
+                </div>
+            </div>
+            <button onclick="calculate()" class="btn btn-primary btn-lg"  role="button">Calculate</button>
+            <hr class="my-4">
+            <p>
+                Volume of Dugout Pond = <span id="output1">-</span>m<sup>3</sup><br>Total Cost of Construction = Rs. <span id="output2">0</span>/-<br>
+            </p>
+        </div>
+
+        <div class="">
+            <img src="../images/dougout.jpg" alt="" class="img-fluid">
+            <p>
+                <b>Designing Dugout Farm Ponds</b>
+                <br>
+                The design of farm ponds includes determination of capacity, its location, utilization plan and shape and size.
+                <br>
+                Catchment and Cultivable Area Ratio:
+                <br>
+                This ratio is particularly important to determine the optimal size of pond based on the available catchment and the utilization of stored water in the cultivable area. The ratio between catchment (Aca) and cultivable area (Acu) also influenced by runoff coefficient and runoff efficiency factor. This ratio indicates the amount of cultivated area in the total catchment area. This ratio is given as (Critchley et al., 1991):
+                <img src="../images/dougout3.jpg" alt="" class="img-fluid">
+                <br>
+                Where CWR is the crop water requirement, DR is the design rainfall, RC is the runoff coefficient, RE is runoff efficiency factor, Aca is the catchment area and Acu is the cultivable area.
+                <br>
+                Crop water requirement depend upon the type of crop and location specific climate and can be calculated from standard equations and models.
+                <br>
+                Runoff coefficient is the runoff to rainfall ratio. It is amount of surface flowover the ground. The coefficient is governed by slope, soil type, vegetation, AMC, and rainfall characteristics (intensity, frequency and duration). Typically this coefficient ranges between 10 to 50%. Larger catchment has lower runoff coefficient than smaller catchment (1-5 ha). The runoff coefficients are site specific and should be determined locally.
+                Efficiency factors address the issue of uneven distribution of the runoff water within the field. The uneven distribution occurs due to differential infiltration and percolation and surface depression. When the cultivated area is leveled and smooth, the efficiency is higher. Generally micro- catchment systems have higher efficiency. The efficiency can be determined using the graphical relationship between runoff efficiency and catchment area
+                <br>
+            </p>
+            <img src="../images/dougout4.jpg" alt="" class="img-fluid">
+            <p>
+                The basic principle of design is to produce a satisfactory functional structure at a minimum cost. To minimize the cost, the pond should be designed for its maximum utilization considering the three strategies for irrigation particularly in rainfed agriculture 
+                <ol>
+                    <li>Meeting the crop water requirement of growing season.</li>
+                    <li>Meeting water requirement of critical irrigation (CRI) during the critical stages of crop growth.</li>
+                    <li>Meeting water requirement in cropping system approach e.g. irrigation during critical stages of kharif crop plus water requirement of Rabi crop such as vegetables.</li>
+                </ol>
+
+                The graph provided in Fig.  22a and 2b can be used to determine the expected runoff volume to determine the net capacity of the of the proposed farm pond. This graph is however developed for seasonal rainfall of 375 mm at 75 % probability and 425 mm at 67 % probability. Similar graphs can be generated for different rainfall as well. Depending on the efficiency factor, runoff coefficient and catchment area, runoff volume is estimated and accordingly shape, size and dimension of the ponds are designed.
+<b>Shape of the Pond</b><br>
+Generally, the farm ponds are excavated in the shape of rectangular, square or inverted cone with circular cross section. Though, inverted cone and other curved shape ponds are difficult to construct but many times it provides higher ratio of volume to wetted surface that increases the net storage after moderating for seepage loss.
+<b>Dimension of Ponds</b><br>
+The optimum dimension of farm ponds should be based on the hydrological consideration and catchment area. The farm pond with respect to small catchment may not have sufficient runoff to be filled and risk of being dried during dry spell. Similarly pond with large catchment would require large water control structure and would be difficult to manage. Generally the area under dug out farm pond should not be more than 10% of the farm catchment.
+
+            </p>
+            <img src="../images/dougout1.jpg" alt="" class="img-fluid">
+            <img src="../images/dougout5.jpg" alt="" class="img-fluid">
+            <p>
+                <b>Depth and Side Slope</b>
+The depth of the farm pond is decided by considering soil depth, soil type and equipment used in excavation. Though, the evaporation loss component can be minimized by increasing the depth but, from practical point of view the ideal depth is limited to 3 to 3.5 meter. Any depth beyond 4.0 meter will be uneconomical if human labour is employed in excavation.
+ Based on experience, it is observed that the side slope of the pond should not be steeper than the natural angle of repose of the excavated material. Table 28.1 presents the recommended side slope of farm pond for different soil as suggested by Critchley et al. (2011). Another factor while considering the side slope is duration of standing of water in the farm pond. For higher duration, flatter side slope is recommended to avoid the slippage due to saturation particularly for unlined pond.
+            </p>
+            <table>
+                <th>
+                    <td>Soil Type</td>
+                    <td>Slope (horizontal:vertical)</td>
+                </th>
+                <tr>
+                    <td>Clay</td>
+                    <td>1:1 to 2:1</td>
+                </tr>
+                <tr>
+                    <td>Clay loam</td>
+                    <td>1.5:1 to 2:1</td>
+                </tr>
+                <tr>
+                    <td>Clay loam</td>
+                    <td>2:1 to 2.5:1</td>
+                </tr>
+                <tr>
+                    <td>Sandy</td>
+                    <td>3:1</td>
+                </tr>
+            </table>
+            <p>The volume of the farm pond can be determined using eq. as follows:</p>
+            <img src="../images/dougout2.jpg" alt="">
+            <p>Where, is volume of exacavation (m3);  is the area of excavation at ground surface (m2),  is the area of exacavation at mid-depth point (D/2) (m2); C is the area at the bottom of the pond (m2) and D is the design depth (m).</p>
+        </div>
+
+    <!-- scripts -->
+    <script src="./index.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+</body>
+</html>

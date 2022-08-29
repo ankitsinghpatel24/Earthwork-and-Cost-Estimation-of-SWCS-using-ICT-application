@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contour Bud</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+
+    <div class="container  my-4">
+        <div class="jumbotron">
+            <h1 class="">Contour Bund</h1>
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                  <span class="input-group-text" id="basic-addon1">Top Width</span>
+                </div>
+                <input type="text" name='top_width' class="form-control" placeholder="Top Width (in meters)" aria-label="top_width" aria-describedby="basic-addon1">
+                <div class="input-group-append">
+                    <span class="input-group-text" id="basic-addon2">meter</span>
+                </div>
+            </div>
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                  <span class="input-group-text" id="basic-addon1">Bottom Width</span>
+                </div>
+                <input type="text" name='bottom_width' class="form-control" placeholder="Top Width (in meters)" aria-label="bottom_width" aria-describedby="basic-addon1">
+                <div class="input-group-append">
+                    <span class="input-group-text" id="basic-addon2">meter</span>
+                </div>
+            </div>
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                  <span class="input-group-text" id="basic-addon1">Depth</span>
+                </div>
+                <input type="text" name='depth' class="form-control" placeholder="Depth (in meters)" aria-label="depth" aria-describedby="basic-addon1">
+                <div class="input-group-append">
+                    <span class="input-group-text" id="basic-addon2">meter</span>
+                </div>
+            </div>
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                  <span class="input-group-text" id="basic-addon1">No. of HA</span>
+                </div>
+                <input type="text" name='ha' class="form-control" placeholder="No. of HA (units)" aria-label="ha" aria-describedby="basic-addon1">
+                <div class="input-group-append">
+                    <span class="input-group-text" id="basic-addon2">units</span>
+                </div>
+            </div>
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                  <span class="input-group-text" id="basic-addon1">Land Slope</span>
+                </div>
+                <input type="text" name='land_slope' class="form-control" placeholder="Land Slope (in %)" aria-label="width" aria-describedby="basic-addon1">
+                <div class="input-group-append">
+                    <span class="input-group-text" id="basic-addon2">%</span>
+                </div>
+            </div>
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                  <span class="input-group-text" id="basic-addon1">Rainfall</span>
+                </div>
+                <select name="rainfall" placeholder="Rainfall Level"  class="form-control" id="exampleFormControlSelect1">
+                    <option value="-1">Select Rainfall Level</option>
+                    <option value=0.1>High</option>
+                    <option value=0.1>Medium</option>
+                    <option value=0.0667>Low</option>
+                </select>
+                <div class="input-group-append">
+                    <span class="input-group-text" id="basic-addon2">%</span>
+                </div>
+            </div>
+            
+            <button onclick="calculate()" class="btn btn-primary btn-lg"  role="button">Calculate</button>
+            <hr class="my-4">
+            <p>
+                Earthwork per ha = <span id="output1"></span><br>Total Cost of Construction = <span id="output2"></span><br>
+            </p>
+        </div>
+
+        <div >
+            <img src="../images/contour.png" class="img-fluid mx-auto" alt="">
+            <p class="">
+                Contour bunds are laid out in those areas which have less rainfall and permeable soils. The major requirements in such areas are prevention of soil erosion and conservation of rain water in the soil for crop use. To maximize the conservation of rainwater in the soil, no longitudinal slope is provided to the field strip. In such a system of bunding, the bunds are designed to be laid out on contours with minor adjustments, wherever necessary.
+                <br>
+                <br>
+                The main functions of contour bunds are:
+                <ol>
+                    <li>
+                        It reduces the length of slope which in turn reduces the soil erosion.
+                    </li>
+                    <li>
+                        The water is impounded for some time and gets recharged into the soil which helps in crop cultivation.
+                    </li>
+                </ol>
+                <br>
+                The limitations of contour bunds are:
+                <ol>
+                    <li>
+                        The contour bunds are suitable for those areas, which receive the annual rainfall less than 600 mm
+                    </li>
+                    <li>
+                        It is not suitable for clayey soils.
+                    </li>
+                    <li>
+                        Contour bunding is not suitable on the land slopes greater than 6%.
+                    </li>
+                </ol>
+            </p>
+
+        </div>
+    </div>
+
+    
+    
+
+
+    <!-- scripts -->
+    <script src="./index.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+</body>
+</html>
